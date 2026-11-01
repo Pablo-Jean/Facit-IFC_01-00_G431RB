@@ -23,6 +23,7 @@
 #include <timers.h>
 
 #include "comm.h"
+#include "menu.h"
 
 /* Enumerates */
 typedef enum{
@@ -52,6 +53,7 @@ typedef struct{
 
 typedef struct{
 	comm_t comm;
+	menu_t menu;
 	QueueHandle_t x_comm_queue;
 }app_t;
 

@@ -35,6 +35,8 @@ static void app_task(void *pvParams){
 	comm->u32_ka_timeout_ms = 3000;
 	comm_init(comm);
 
+	menu_init(&App->menu);
+
 	App->x_comm_queue = xQueueCreate(10, sizeof(app_comm_queue_item_t));
 
 	comm_register_keep_alive(comm, 0x010);
